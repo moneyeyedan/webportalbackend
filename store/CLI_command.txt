@@ -1,0 +1,15 @@
+# sequelize 
+    sequelize init
+
+# initial migrations
+    *roles*  sequelize model:generate --name roles --attributes name:string,is_active:boolean,created_at:date,updated_at:date --underscored
+    *users*  sequelize model:generate --name users --attributes username:string,password:string,is_active:boolean,created_by:UUID,updated_by:UUID  --underscored
+    *user_profiles* sequelize model:generate --name user_profiles --attributes user_id:UUID,username:string,birthday:date,role_id:UUID,is_active:boolean --underscored
+    *projects*  sequelize model:generate --name projects --attributes name:string,status:string,created_by:UUID,updated_by:UUID  --underscored
+
+#if you want debugger inside the visual studio
+  1.  click Run menu 
+  2. select dubugger
+  3. open top search bar 
+  4. select node attach
+  5. then choose your script run file command
